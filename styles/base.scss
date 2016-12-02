@@ -1,0 +1,418 @@
+@import url(http://allfont.net/allfont.css?fonts=montserrat-light);
+
+//colors
+$color_body: #fafafa;
+$color_border: #e6ebee;
+$color_shadow: #f1f1f1;
+$color_white: white;
+$color_dk: #3f5364;
+$color_body: #fafafa;
+$color_minor: #3897d3;
+$color_paragraph: #506679;
+$color_hover: #677c8b;
+$color_gray: #c2cbd3;
+$color_dk_opacity: rgba(103, 124, 139, 0.2);
+$color_critical: #e27c79;
+$color_major: #fdb714;
+$color_chef: #ffa445;
+$color_success: #3dc5aa;
+$color_lt: #f9fafb;
+$color_tag: #57abe0;
+
+//fonts
+$font_montserrat: Montserrat Light;
+$font_arial: arial;
+$font_hlight: HelveticaNeue-Light;
+$font_hneue: HelveticaNeue;
+$font_h: Helvetica;
+$font_lucida: Lucida Grande;
+$font_sans: sans-serif;
+
+%font_headings {
+  font-family: $font_montserrat, $font_arial;
+  font-weight: 100;
+}
+
+%font_paragraph {
+  font-family: $font_hlight, $font_hneue, $font_h, $font_arial, $font_lucida, $font_sans;
+  letter-spacing: 0.01em;
+	font-size: 1em;
+}
+
+//Sizes
+
+$size_4: 4px;
+$size_16: 16px;
+$size_45: 45px;
+$size_shrink: 80%;
+$size_7P: 7%;
+
+
+//Consistent Styles
+
+%border-radius  {border-radius: $size_4;}
+
+%box {
+	border: 1px solid $color_border;
+	box-shadow: 0 0 8px 0 $color_shadow;
+	padding: $size_16;
+	background-color: $color_white;
+}
+
+%transition {
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+}
+
+%form {
+	height: $size_45;
+	width: 100%;
+	padding: 0 0 0 $size_16;
+}
+
+* {
+	line-height: 1.6em;
+	color: $color_dk;
+}
+
+body {
+	background-color: $color_body;
+}
+
+//Typography
+
+h1 {
+  @extend %font_headings;
+	font-size: 1.6em;
+}
+h2 {
+	@extend %font_headings;
+	font-size: 1.3em;
+}
+h3 {
+	@extend %font_headings;
+	font-size: 1em;
+}
+small {
+	@extend %font_headings;
+	font-size: $size_shrink;
+}
+a {
+  @extend %font_paragraph;
+	text-decoration: none;
+	@extend %transition;
+	color: $color_minor;
+	&:hover {
+		text-decoration: underline;
+	}
+	i:hover {
+		opacity: 0.8;
+	}
+}
+p {
+  @extend %font_paragraph;
+	color: $color_paragraph;
+}
+
+//Buttons
+
+button {
+	@extend %font_paragraph;
+	@extend %border-radius;
+	@extend %transition;
+	text-align: center;
+	width: 160px;
+	height: $size_45;
+	border: 0;
+	color: $color_white;
+	background-color: $color_dk;
+	cursor: pointer;
+	&:focus {
+		outline: 0;
+	}
+	&:hover {
+		background-color: $color_hover;
+	}
+	i {
+		color: $color_white;
+		padding-right: 8px;
+	}
+}
+.btn-2 {
+	background-color: $color_gray;
+}
+.disabled {
+	cursor: default;
+	background-color: $color_dk_opacity;
+	&:hover {
+		cursor: default;
+		background-color: $color_dk_opacity;
+	}
+}
+.btn-i-dk {
+	padding-right: 0;
+	width: $size_45;
+	i {
+		line-height: 40px;
+		padding-left: 2px;
+	}
+}
+.btn-i-outline {
+	padding-right: 0;
+	width: $size_45;
+	border: solid 1px $color_dk;
+	background-color: initial;
+	&:hover {
+		background-color: $color_dk;
+		i {
+			color: $color_white;
+		}
+	}
+	i {
+		line-height: 40px;
+		padding-left: 2px;
+		color: $color_dk;
+	}
+}
+.btn-i-red {
+	padding-right: 0;
+	width: $size_45;
+	border: solid 1px $color_critical;
+	background-color: initial;
+	&:hover {
+		background-color: $color_critical;
+		i {
+			color: $color_white;
+		}
+	}
+	i {
+		line-height: 40px;
+		padding-left: 2px;
+		color: $color_critical;
+	}
+}
+
+//Box Styles
+
+.box {
+	@extend %box;
+	@extend %border-radius;
+}
+.box-inverse {
+	@extend %box;
+	@extend %border-radius;
+	border: 1px solid $color_white;
+}
+.box-child {
+	@extend %box;
+	@extend %border-radius;
+	background-color: $color_lt;
+}
+.modal {
+	@extend %box;
+	@extend %border-radius;
+	box-shadow: 0 0 8px 0 $color_dk;
+}
+
+//Label Styles
+
+.tag {
+	@extend %border-radius;
+	padding: 0 30px;
+	max-width: 100%;
+	background-color: $color_tag;
+	border: 1px solid $color_minor;
+	margin: 0;
+	line-height: 30px;
+	font-size: $size_shrink;
+	color: $color_white;
+	text-align: center;
+	display: inline-block;
+}
+
+.tag-key {
+	h3 {
+		padding: 0 $size_16;
+		max-width: 100%;
+		border-radius: 0 $size_4 $size_4 0;
+		margin: 0;
+		line-height: 30px;
+		font-size: $size_shrink;
+		color: $color_white;
+		text-align: center;
+		background-color: $color_dk;
+		display: inline-block;
+		&:first-child {
+			padding: 0 $size_16 0 13px;
+			background-color: $color_success;
+			border-radius:  $size_4 0 0 $size_4;
+		}
+		&:nth-child(2) {
+			margin-left: -$size_4;
+		}
+	}
+	i {
+		color: $color_white;
+	}
+}
+
+.l-circle {
+	border-radius: 50%;
+	height: $size_45;
+	width: $size_45;
+	text-align: center;
+	p {
+		line-height: $size_45;
+		margin: 0;
+	}
+	h3 {
+		line-height: $size_45;
+		margin: 0;
+	}
+	i {
+		line-height: $size_45;
+	}
+}
+
+//Color Styles
+
+.t-minor {
+	text-decoration: none;
+	color: $color_minor;
+}
+.t-critical {
+	color: $color_critical;
+}
+.t-major {
+	color: $color_major;
+}
+.t-inverse {
+	color: $color_white;
+}
+.t-gray {
+	color: $color_gray;
+}
+.t-chef {
+	color: $color_chef;
+}
+.b-critical {
+	background-color: $color_critical;
+}
+.b-major {
+	background-color: $color_major;
+}
+.b-minor {
+	background-color: $color_minor;
+}
+.b-chef {
+	background-color: $color_chef;
+}
+.b-dk {
+	background-color: $color_dk;
+}
+.b-success {
+	background-color: $color_success;
+}
+.b-bg {
+	background-color: $color_body;
+}
+.b-lt {
+	background-color: $color_lt;
+}
+.b-inverse {
+	background-color: $color_white;
+}
+.b-gray {
+	background-color: $color_gray;
+}
+
+//Form Styles
+
+input {
+	@extend %box;
+	@extend %border-radius;
+	@extend %form;
+	@extend %font_paragraph;
+	color: $color_paragraph;
+	&:focus {
+		border-color: $color_gray;
+		outline-width: 0;
+	}
+}
+textarea {
+  @extend %font_paragraph;
+	@extend %form;
+	color: $color_paragraph;
+	&:focus {
+		border-color: $color_gray;
+		outline-width: 0;
+	}
+}
+
+::-webkit-input-placeholder {
+	color: $color_gray;
+	font-size: $size_shrink;
+}
+:-moz-placeholder {
+	color: $color_gray;
+	font-size: $size_shrink;
+}
+::-moz-placeholder {
+	color: $color_gray;
+	font-size: $size_shrink;
+}
+:-ms-input-placeholder {
+	color: $color_gray;
+	font-size: $size_shrink;
+}
+
+//Alignment Styles
+
+.strict-c {
+	margin: 0 auto;
+	text-align: center;
+	clear: both;
+}
+.strict-r {
+	float: right;
+	clear: both;
+}
+.strict-l {
+	float: left;
+	text-align: left;
+	clear: both;
+}
+
+//Margin Styles
+
+.space-lg-t {
+	margin-top: $size_7P;
+}
+.space-lg-b {
+	margin-bottom: $size_7P;
+}
+.space-lg-both {
+	margin-top: $size_7P;
+	margin-bottom: $size_7P;
+}
+.space-sm-t {
+	margin-top: $size_16;
+}
+.space-sm-b {
+	margin-bottom: $size_16;
+}
+.space-sm-both-v {
+	margin-top: $size_16;
+	margin-bottom: $size_16;
+}
+.space-sm-l {
+	margin-left: $size_16;
+}
+.space-sm-r {
+	margin-right: $size_16;
+}
+.space-sm-both-h {
+	margin-left: $size_16;
+	margin-right: $size_16;
+}

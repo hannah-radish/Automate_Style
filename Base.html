@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	<title>Base CSS – Styleguide</title>
+
+
+	<meta content="width=device-width" name="viewport">
+  <!-- Styleguide CSS -->
+	<link href="styles/hgt-syntax.css" rel="stylesheet">
+	<link href="styles/hgt.css" rel="stylesheet">
+	<link href="styles/font-awesome.min.css" rel="stylesheet">
+  <!-- Source CSS -->
+	<link href="styles/public/base.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+	<div class="hgt-pagehead">
+		<div class="hgt-container">
+			<nav class="hgt-pagehead-nav" role="navigation">
+				<a class="hgt-pagehead-nav-item selected t-inverse" href="base.html">Bass
+				SCSS</a> <a class="hgt-pagehead-nav-item t-inverse" href="components.html">Components</a> <a class="hgt-pagehead-nav-item" href="index.html"></a>
+			</nav>
+
+
+			<h1 class="hgt-pagehead-title t-inverse">Compliance Style Guide</h1>
+		</div>
+	</div>
+
+
+	<div class="hgt-styleguide hgt-container">
+		<div class="hgt-columns">
+			<div class="hgt-column one-fourth">
+				<div class="hgt-sticky-menu-wrapper"><nav class="hgt-menu">
+					<a class="hgt-menu-item selected" href="#0_overview">Overview</a> <a class="hgt-menu-item" href="#0_typography">Typography</a> <a class="hgt-menu-item" href="#2_buttons">Buttons</a> <a class="hgt-menu-item" href="#3_icons">Iconography</a> <a class="hgt-menu-item" href="#4_colors">Back-fill Colors</a>
+					<a class="hgt-menu-item" href="#5_labels">Labels</a>
+					<a class="hgt-menu-item" href="#6_boxes">Boxes</a>
+					<a class="hgt-menu-item" href="#7_input">Input</a> <a class="hgt-menu-item" href="#8_align">Alignment</a> <a class="hgt-menu-item" href="#9_margins">Margins</a>
+				</nav></div>
+			</div>
+
+
+			<div class="hgt-column three-fourths">
+				<div class="hgt-content">
+					<h1 id="0_overview">Overview</h1>
+
+
+					<p>Welcome to the living style guide for Chef Compliance. To get started
+					please attach the below file to your working code file.</p>
+
+
+					<div class="codeBlock">
+						<pre><span class="nt">styles/base.scss</span></pre>
+					</div>
+
+
+					<p>We plan to use the light-weight grid system from bourbon. Please view
+					<a href="http://neat.bourbon.io/examples/">Bourbon Grid System</a> for
+					information regarding the grid system.</p>
+
+
+					<h1 id="0_typography">Typography</h1>
+
+
+					<p>Our type faces include montserrat-light, and HelveticaNeue-Light with a
+					fall back to arial and helvetica.</p>
+
+
+					<div class="codeExample">
+						<div class="exampleOutput">
+							<h1>H1 is used for the heading of a parent page</h1>
+
+
+							<h2>H2 is used for the heading of a child page</h2>
+
+
+							<h3>H3 is used for table headings and labels</h3>
+
+
+							<h3><small>Use the SMALL tag for a teeny tiny label</small>
+							</h3>
+
+
+							<p>P is used for all paragraph text</p>
+						</div>
+					</div>
+
+
+					<h2 id="color">Color variations</h2>
+
+
+					<div class="codeExample">
+						<div class="exampleOutput">
+							<h3 class="t-critical">This is a label for critical</h3>
+
+
+							<div class="codeBlock">
+								<pre>h3 class = <span class="nt">"t-critical"</span></pre>
+							</div>
+
+
+							<h3 class="t-major">This is a label for major</h3>
+
+
+							<div class="codeBlock">
+								<pre>h3 class = <span class="nt">"t-major"</span></pre>
+							</div>
+
+
+							<h3 class="t-minor">This is a label for minor</h3>
+
+
+							<div class="codeBlock">
+								<pre>h3 class = <span class="nt">"t-minor"</span></pre>
+							</div>
+
+
+							<h3 class="t-inverse">You can't see this because it's white!</h3>
+
+
+							<div class="codeBlock">
+								<pre>h3 class = <span class="nt">"t-inverse"</span></pre>
+							</div>
+
+
+							<p class="t-gray">I am disabled or place holder text</p>
+
+
+							<div class="codeBlock">
+								<pre>p class = <span class="nt">"t-gray"</span></pre>
+							</div>
+
+
+							<p class="t-chef">The good ol' Chef orange</p>
+
+
+							<div class="codeBlock">
+								<pre>p class = <span class="nt">"t-chef"</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<h2>Links</h2>
+
+
+					<div class="codeExample">
+						<div class="exampleOutput">
+							<a href="http://example.com/">I am an a tag link</a>
+						</div>
+					</div>
+
+
+					<h1 id="2_buttons">Buttons</h1>
+
+
+					<p>Buttons should always have a height of 45px.</p>
+
+
+					<div class="codeExample">
+						<div class="exampleOutput">
+							<button>Primary</button> <button class="btn-2">Secondary</button>
+							<button class="disabled">Disabled</button>
+						</div>
+					</div>
+
+
+					<div class="codeBlock">
+						<pre>button class = <span class="nt">"btn-2"</span> =&gt; secondary</pre>
+					</div>
+
+
+					<div class="codeBlock">
+						<pre>button class = <span class="nt">"disabled"</span> =&gt; disabled</pre>
+					</div>
+
+
+					<h2>Buttons with icons</h2>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<button><i class="fa fa-upload fa-fw"></i>Upload</button>
+							</div>
+						</div>
+
+
+						<div class="codeBlock">
+							<pre><span class="nt">&lt;button&gt;&lt;i class="fa fa-upload fa-fw"&gt;&lt;/i&gt;Update&lt;/button&gt;</span></pre>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<button class="btn-i-dk"><i class="fa fa-search fa-fw"></i></button>
+							</div>
+						</div>
+
+
+						<div class="codeBlock">
+							<pre><span class="nt">&lt;button class="btn-i-dk"&gt;&lt;i class="fa fa-search fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;</span></pre>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<button class="btn-i-outline"><i class="fa fa-share-square-o fa-fw"></i></button>
+							</div>
+						</div>
+
+
+						<div class="codeBlock">
+							<pre><span class="nt">&lt;button class="btn-i-outline"&gt;&lt;i class=" fa-share-square-o fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;</span></pre>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<button class="btn-i-outline"><i class="fa fa-floppy-o fa-fw"></i></button>
+							</div>
+						</div>
+
+
+						<div class="codeBlock">
+							<pre><span class="nt">&lt;button class="btn-i-outline"&gt;&lt;i class="fa fa-floppy-o fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;</span></pre>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<button class="btn-i-outline"><i class="fa fa-download fa-fw"></i></button>
+							</div>
+						</div>
+
+
+						<div class="codeBlock">
+							<pre><span class="nt">&lt;button class="btn-i-outline"&gt;&lt;i class="fa fa-download fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;</span></pre>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<button class="btn-i-dk"><i class="fa fa-folder-open fa-fw"></i></button>
+							</div>
+						</div>
+
+
+						<div class="codeBlock">
+							<pre><span class="nt">&lt;button class="btn-i-dk"&gt;&lt;i class="fa fa-folder-open fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;</span></pre>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third" style="padding-bottom:3em;">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<button class="btn-i-red"><i class="fa fa-trash-o fa-fw"></i></button>
+							</div>
+						</div>
+
+
+						<div class="codeBlock">
+							<pre><span class="nt">&lt;button class="btn-i-red"&gt;&lt;i class="fa fa-trash-o fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;</span></pre>
+						</div>
+					</div>
+
+
+					<h1 id="3_icons" style="clear:both;">Iconography</h1>
+
+
+					<p>Chef likes to use font awesome for iconography. Please find the library
+					at the <a href="http://fontawesome.io/get-started/">Font Awesome Site</a>.
+					You can mix and match and change the color for the icons using the font
+					color variations <a href="http://127.0.0.1:8000/base.html#color">above</a>.</p>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-caret-up fa-fw"></i>
+
+								<pre><span class="nt">fa fa-caret-up fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="t-gray fa fa-caret-down fa-fw"></i>
+
+								<pre><span class="nt">fa fa-caret-down fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-caret-right fa-fw"></i>
+
+								<pre><span class="nt">fa fa-caret-right fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-github fa-fw"></i>
+
+								<pre><span class="nt">fa fa-github fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-bell-o fa-fw"></i>
+
+								<pre><span class="nt">fa fa-bell-o fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-calendar fa-fw"></i>
+
+								<pre><span class="nt">fa fa-calendar fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-clipboard fa-fw"></i>
+
+								<pre><span class="nt">fa fa-clipboard fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-list-alt fa-fw"></i>
+
+								<pre><span class="nt">fa fa-list-alt fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-shield fa-fw"></i>
+
+								<pre><span class="nt">fa fa-shield fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-plus-square fa-fw"></i>
+
+								<pre><span class="nt">fa fa-plus-square fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-minus-square fa-fw"></i>
+
+								<pre><span class="nt">fa fa-minus-square fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-times fa-fw"></i>
+
+								<pre><span class="nt">fa fa-times fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-tag fa-fw"></i>
+
+								<pre><span class="nt">fa fa-tag fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-book fa-fw"></i>
+
+								<pre><span class="nt">fa fa-book fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-download fa-fw"></i>
+
+								<pre><span class="nt">fa fa-download fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-info-circle fa-fw"></i>
+
+								<pre><span class="nt">fa fa-info-circle fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="t-critical fa fa-times-circle fa-fw"></i>
+
+								<pre><span class="nt">fa  fa-times-circle fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="t-major fa fa-minus-circle fa-fw"></i>
+
+								<pre><span class="nt">fa  fa-minus-circle fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class=" fa fa-smile-o fa-fw"></i>
+
+								<pre><span class="nt">fa fa-smile-o fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-frown-o fa-fw"></i>
+
+								<pre><span class="nt">fa fa-frown-o fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third" style="padding-bottom:3em;">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<i class="fa fa-exclamation-circle fa-fw t-minor"></i>
+
+								<pre><span class="nt">fa fa-exclamation-circle <br>fa-fw</span></pre>
+							</div>
+						</div>
+					</div>
+
+
+					<h1 id="4_colors" style="clear:both;">Back-Fill Colors</h1>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput b-critical">
+								<pre class="t-inverse">b-critical</pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput b-major">
+								<pre class="t-inverse">b-major</pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput b-minor">
+								<pre class="t-inverse">b-minor</pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput b-chef">
+								<pre class="t-inverse">b-chef</pre>
+							</div>
+						</div>
+
+
+						<p>Reserved for alerts, call-outs and notifications.</p>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput b-dk">
+								<pre class="t-inverse">b-dk</pre>
+							</div>
+						</div>
+
+
+						<p>Use for highlighted actionable elements</p>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput b-bg">
+								<pre>b-bg</pre>
+							</div>
+						</div>
+
+
+						<p>This must be used for the body background only!</p>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput b-inverse">
+								<pre>b-inverse</pre>
+							</div>
+						</div>
+
+
+						<p>White back-fill for content</p>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput b-lt">
+								<pre>b-lt</pre>
+							</div>
+						</div>
+
+
+						<p>Back-fill for child content</p>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput b-gray">
+								<pre class="t-inverse">b-gray</pre>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third" style="padding-bottom:3em;">
+						<div class="codeExample">
+							<div class="exampleOutput b-success">
+								<pre class="t-inverse">b-success</pre>
+							</div>
+						</div>
+					</div>
+
+
+					<h1 id="5_labels" style="clear:both;">Labels</h1>
+
+
+					<p>Labels range and styles. Some are actionable, some are not. Labels
+					should always use the H3 font.</p>
+
+
+					<h2>Circular Labels</h2>
+
+
+					<p>You can apply background color classes to the l-circle class and/or
+					apply font colors to the icon or font</p>
+
+
+					<div class="hgt-column one-fourth">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<div class="l-circle b-critical strict-c">
+									<h3 class="t-inverse">123</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-fourth">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<div class="l-circle b-major strict-c">
+									<h3 class="t-inverse">123</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-fourth">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<div class="l-circle b-chef strict-c">
+									<i class="t-inverse fa fa-github fa-fw"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-fourth">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<div class="l-circle b-success strict-c">
+									<i class="t-inverse fa fa-smile-o fa-fw"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both">
+						<pre><span class="nt">&lt;div class = "l-circle" &gt;YOUR H3 OR ICON HERE&lt;/div&gt;</span></pre>
+					</div>
+
+
+					<h2>Tags</h2>
+
+
+					<p>Tags will eventually be actionable. They should all be aligned to this
+					style. (no color customization). They all have a flexible width.</p>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<h3 class="tag">average tag</h3>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<h3 class="tag">tiny tag</h3>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="codeExample">
+							<div class="exampleOutput">
+								<h3 class="tag">very very long tag</h3>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both">
+						<pre><span class="nt">&lt;h3 class = "tag" &gt;ENTER TAG NAME HERE&lt;/h3&gt;</span></pre>
+					</div>
+
+
+					<h2>Key Value Tags</h2>
+
+
+					<div class="codeExample">
+						<div class="exampleOutput">
+							<div class="tag-key">
+								<h3><i class="fa fa-shield fa-fw"></i>NIST</h3>
+
+
+								<h3>SP 800-53</h3>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="codeExample">
+						<div class="exampleOutput">
+							<div class="tag-key">
+								<h3><i class="fa fa-shield fa-fw"></i>CCE</h3>
+
+
+								<h3>COA-31</h3>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="codeBlock">
+						<pre><span class="nt">&lt;div class="tag-key"&gt;<br>&lt;h3&gt;&lt;i class="fa fa-shield fa-fw"&gt; &lt;/i&gt;ORG&lt;/h3&gt;<br>&lt;h3&gt;POLICY&lt;/h3&gt;<br>&lt;/div&gt;</span></pre>
+					</div>
+
+
+					<h1 id="6_boxes">Boxes</h1>
+
+
+					<p>Boxes should all have a padding of 16px and include a standard box
+					shadow.</p>
+
+
+					<h3 class="box">I have a border</h3>
+
+
+					<div class="codeBlock">
+						<pre><span class="nt">&lt;div class="box"&gt;&lt;/div&gt;</span></pre>
+					</div>
+
+
+					<h3 class="box-inverse">I don't have a border</h3>
+
+
+					<div class="codeBlock">
+						<pre><span class="nt">&lt;div class="box-inverse"&gt;&lt;/div&gt;</span></pre>
+					</div>
+
+
+					<h3 class="box-child">I am used under a box with border, as a collapsable
+					element</h3>
+
+
+					<div class="codeBlock">
+						<pre><span class="nt">&lt;div class="box-child"&gt;&lt;/div&gt;</span></pre>
+					</div>
+
+
+					<h3 class="modal">I am a modal against a dark background</h3>
+
+
+					<div class="codeBlock">
+						<pre><span class="nt">&lt;div class="modal"&gt;&lt;/div&gt;</span></pre>
+					</div>
+
+
+					<h1 id="7_input">Input</h1>
+
+
+					<p>Input is used for form fields, search, and file uploads.</p>
+					<input placeholder="Type Something Here" style="margin-bottom: 16px">
+
+					<div class="codeBlock" style="clear:both;">
+						<pre><span class="nt">&lt;input&gt;&lt;/input&gt;</span></pre>
+					</div>
+
+
+					<h1 id="8_align">Alignment</h1>
+
+
+					<p>Use these classes to align all the things!</p>
+
+
+					<div class="hgt-column one-third">
+						<div class="exampleOutput strict-c">
+							<h3 class="box b-chef t-inverse">center</h3>
+						</div>
+
+
+						<div class="codeBlock">
+							<pre><span class="nt">strict-c</span></pre>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third">
+						<div class="exampleOutput strict-l">
+							<h3 class="box b-chef t-inverse">left</h3>
+						</div>
+
+
+						<div class="codeBlock" style="clear:both;">
+							<pre><span class="nt">strict-l</span></pre>
+						</div>
+					</div>
+
+
+					<div class="hgt-column one-third" style="padding-bottom:3em;">
+						<div class="exampleOutput strict-r">
+							<h3 class="box b-chef t-inverse">right</h3>
+						</div>
+
+
+						<div class="codeBlock" style="clear:both;">
+							<pre><span class="nt">strict-r</span></pre>
+						</div>
+					</div>
+
+
+					<h1 id="9_margins" style="clear:both">Margins</h1>
+
+
+					<h2>7% Large Margins</h2>
+
+
+					<div class="exampleOutput" style="padding:0px">
+						<h3 class="box b-success t-inverse" style="padding-top:7%; padding-bottom:7%;">7% large margins</h3>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both;">
+						<pre><span class="nt">space-lg-t</span> =&gt; Large margin top</pre>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both;">
+						<pre><span class="nt">space-lg-b</span> =&gt; Large margin bottom</pre>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both;">
+						<pre><span class="nt">space-lg-both</span> =&gt; Large margin bottom and top</pre>
+					</div>
+
+
+					<h2>16px Small Margins</h2>
+
+
+					<div class="exampleOutput" style="padding:0px">
+						<h3 class="box b-success t-inverse" style="padding-top:16px; padding-bottom:16px;">16px large margins</h3>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both;">
+						<pre><span class="nt">space-sm-t</span> =&gt; Small margin top</pre>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both;">
+						<pre><span class="nt">space-sm-b</span> =&gt; Small margin bottom</pre>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both;">
+						<pre><span class="nt">space-sm-both-v</span> =&gt; Small margin bottom and top</pre>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both;">
+						<pre><span class="nt">space-sm-l</span> =&gt; Small margin left</pre>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both;">
+						<pre><span class="nt">space-sm-r</span> =&gt; Small margin right</pre>
+					</div>
+
+
+					<div class="codeBlock" style="clear:both;">
+						<pre><span class="nt">space-sm-both-h</span> =&gt; Small margin left and right</pre>
+					</div>
+					<!--end here-->
+
+					<div style="padding-bottom:3em;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+	  <script src="scripts/vendor/sticky.min.js"></script>
+	  <script src="scripts/vendor/infinite.min.js"></script>
+	  <script src="scripts/hgt.js"></script>
+
+
+
+	      <script type="text/javascript" src="dist/scripts/main.js"></script>
+	</div>
+
+
+</body></html>
