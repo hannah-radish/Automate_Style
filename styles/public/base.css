@@ -8,7 +8,7 @@ a, p, button, input, textarea {
   letter-spacing: 0.01em;
   font-size: 1em; }
 
-button, .box, .box-inverse, .box-child, .modal, .tag, input {
+button, .box, .box-inverse, .box-child, .modal, .tag, .tag-filter, input {
   border-radius: 4px; }
 
 .box, .box-inverse, .box-child, .modal, input {
@@ -16,6 +16,19 @@ button, .box, .box-inverse, .box-child, .modal, .tag, input {
   box-shadow: 0 0 8px 0 #f1f1f1;
   padding: 16px;
   background-color: white; }
+
+.brdr-critical, .brdr-major, .brdr-minor, .brdr-chef, .brdr-success, .brdr-gray {
+  border-style: solid;
+  border-width: 2px; }
+
+.tag, .tag-filter, .tag-key h3 {
+  padding: 0 30px;
+  max-width: 100%;
+  font-size: 80%;
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block; }
 
 a, button {
   transition: all 0.3s ease;
@@ -128,28 +141,19 @@ button {
   box-shadow: 0 0 8px 0 #3f5364; }
 
 .tag {
-  padding: 0 30px;
-  max-width: 100%;
   background-color: #57abe0;
   border: 1px solid #3897d3;
-  margin: 0;
-  line-height: 30px;
-  font-size: 80%;
-  color: white;
-  text-align: center;
-  display: inline-block; }
+  color: white; }
+
+.tag-filter {
+  border: 1px solid #57abe0;
+  color: #57abe0; }
 
 .tag-key h3 {
   padding: 0 16px;
-  max-width: 100%;
   border-radius: 0 4px 4px 0;
-  margin: 0;
-  line-height: 30px;
-  font-size: 80%;
   color: white;
-  text-align: center;
-  background-color: #3f5364;
-  display: inline-block; }
+  background-color: #3f5364; }
   .tag-key h3:first-child {
     padding: 0 16px 0 13px;
     background-color: #3dc5aa;
@@ -193,6 +197,9 @@ button {
 .t-chef {
   color: #ffa445; }
 
+.t-success {
+  color: #3dc5aa; }
+
 .b-critical {
   background-color: #e27c79; }
 
@@ -222,6 +229,24 @@ button {
 
 .b-gray {
   background-color: #c2cbd3; }
+
+.brdr-critical {
+  border-color: #e27c79; }
+
+.brdr-major {
+  border-color: #fdb714; }
+
+.brdr-minor {
+  border-color: #3897d3; }
+
+.brdr-chef {
+  border-color: #ffa445; }
+
+.brdr-success {
+  border-color: #3dc5aa; }
+
+.brdr-gray {
+  border-color: #c2cbd3; }
 
 input {
   color: #506679; }

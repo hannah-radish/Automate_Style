@@ -59,6 +59,21 @@ $size_7P: 7%;
 	background-color: $color_white;
 }
 
+%border-label {
+  border-style: solid;
+  border-width: 2px;
+}
+
+%tag-style {
+  padding: 0 30px;
+  max-width: 100%;
+  font-size: $size_shrink;
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+}
+
 %transition {
 	transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
@@ -218,31 +233,27 @@ button {
 //Label Styles
 
 .tag {
+  @extend %tag-style;
 	@extend %border-radius;
-	padding: 0 30px;
-	max-width: 100%;
 	background-color: $color_tag;
 	border: 1px solid $color_minor;
-	margin: 0;
-	line-height: 30px;
-	font-size: $size_shrink;
 	color: $color_white;
-	text-align: center;
-	display: inline-block;
+}
+
+.tag-filter {
+  @extend %tag-style;
+	@extend %border-radius;
+	border: 1px solid $color_tag;
+	color: $color_tag;
 }
 
 .tag-key {
 	h3 {
+    @extend %tag-style;
 		padding: 0 $size_16;
-		max-width: 100%;
 		border-radius: 0 $size_4 $size_4 0;
-		margin: 0;
-		line-height: 30px;
-		font-size: $size_shrink;
 		color: $color_white;
-		text-align: center;
 		background-color: $color_dk;
-		display: inline-block;
 		&:first-child {
 			padding: 0 $size_16 0 13px;
 			background-color: $color_success;
@@ -277,6 +288,7 @@ button {
 
 //Color Styles
 
+//font colors
 .t-minor {
 	text-decoration: none;
 	color: $color_minor;
@@ -296,6 +308,10 @@ button {
 .t-chef {
 	color: $color_chef;
 }
+.t-success {
+	color: $color_success;
+}
+//background colors
 .b-critical {
 	background-color: $color_critical;
 }
@@ -325,6 +341,31 @@ button {
 }
 .b-gray {
 	background-color: $color_gray;
+}
+//border colors
+.brdr-critical {
+  @extend %border-label;
+	border-color: $color_critical;
+}
+.brdr-major {
+  @extend %border-label;
+	border-color: $color_major;
+}
+.brdr-minor {
+  @extend %border-label;
+	border-color: $color_minor;
+}
+.brdr-chef {
+  @extend %border-label;
+	border-color: $color_chef;
+}
+.brdr-success {
+  @extend %border-label;
+	border-color: $color_success;
+}
+.brdr-gray {
+  @extend %border-label;
+	border-color: $color_gray;
 }
 
 //Form Styles
